@@ -32,6 +32,7 @@ a {
   text-decoration: none;
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -51,6 +52,7 @@ a {
 }
 
 .logo {
+  flex-shrink: 0;
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -.08em;
@@ -62,9 +64,46 @@ h2 span {
   color: var(--accent);
 }
 
+
+/* Animated header line */
+
+.header-line {
+  position: relative;
+  flex: 1;
+  height: 1px;
+  margin: 0 38px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.header-line-runner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 64px;
+  height: 3px;
+  background: var(--accent);
+  transform: translate(-100%, -50%);
+  animation: header-runner 4s linear infinite;
+}
+
+@keyframes header-runner {
+  from {
+    left: 0;
+    transform: translate(-100%, -50%);
+  }
+
+  to {
+    left: 100%;
+    transform: translate(0, -50%);
+  }
+}
+
+
 nav {
   display: flex;
   gap: 30px;
+  flex-shrink: 0;
 }
 
 nav a {
@@ -85,6 +124,7 @@ nav a:hover {
   color: var(--text);
   font-size: 1.5rem;
 }
+
 
 /* =========================
    HERO
@@ -209,6 +249,7 @@ h1 {
   margin-top: 3px;
 }
 
+
 /* =========================
    GENERAL SECTIONS
 ========================= */
@@ -229,6 +270,7 @@ h1 {
   letter-spacing: -.055em;
 }
 
+
 /* Larger numbered section headings */
 
 .section > .eyebrow {
@@ -236,6 +278,7 @@ h1 {
   font-weight: 500;
   letter-spacing: .12em;
 }
+
 
 /* =========================
    ABOUT
@@ -257,6 +300,7 @@ h1 {
 .section-copy p + p {
   margin-top: 24px;
 }
+
 
 /* =========================
    EXPERIENCE
@@ -309,6 +353,7 @@ h1 {
   margin-top: 7px;
 }
 
+
 /* =========================
    SKILLS
 ========================= */
@@ -349,6 +394,7 @@ h1 {
   font-family: "DM Mono", monospace;
   font-size: .7rem;
 }
+
 
 /* =========================
    EDUCATION
@@ -407,6 +453,7 @@ h1 {
   margin-top: 5px;
 }
 
+
 /* =========================
    PROJECTS
 ========================= */
@@ -451,6 +498,7 @@ h1 {
   margin-top: 24px;
 }
 
+
 /* =========================
    BUTTONS
 ========================= */
@@ -481,6 +529,7 @@ h1 {
 .resume-btn-outline:hover {
   border-color: var(--text);
 }
+
 
 /* =========================
    CONTACT
@@ -559,6 +608,7 @@ h1 {
   font-weight: 800;
 }
 
+
 /* =========================
    FOOTER
 ========================= */
@@ -575,6 +625,7 @@ footer {
   font-size: .7rem;
 }
 
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -583,6 +634,10 @@ footer {
 
   .site-header {
     padding: 18px 22px;
+  }
+
+  .header-line {
+    display: none;
   }
 
   nav {
@@ -649,6 +704,7 @@ footer {
     padding-right: 22px;
   }
 }
+
 
 @media (max-width: 500px) {
 
