@@ -265,7 +265,7 @@ h1 {
 
 .section h2 {
   font-size: clamp(2.6rem, 5vw, 5rem);
-  line-height: .98;
+  line-height: 1.08;
   letter-spacing: -.055em;
 }
 
@@ -292,12 +292,14 @@ h1 {
 
 .split h2 {
   white-space: nowrap;
+  line-height: 1.08;
 }
 
 .section-copy {
   max-width: 650px;
   color: var(--muted);
   font-size: 1.2rem;
+  line-height: 1.7;
 }
 
 .section-copy p + p {
