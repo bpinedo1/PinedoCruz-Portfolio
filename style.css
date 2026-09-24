@@ -99,7 +99,6 @@ h2 span {
   }
 }
 
-
 nav {
   display: flex;
   gap: 30px;
@@ -644,8 +643,33 @@ footer {
     display: none;
   }
 
+  /* Mobile navigation when hamburger is opened */
+  nav.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 15px 22px 22px;
+    background: rgba(11, 13, 16, .98);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(14px);
+  }
+
+  nav.open a {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav.open a:last-child {
+    border-bottom: none;
+  }
+
   .menu-toggle {
     display: block;
+    cursor: pointer;
   }
 
   .hero {
