@@ -290,10 +290,14 @@ h1 {
   align-items: start;
 }
 
+.split h2 {
+  white-space: nowrap;
+}
+
 .section-copy {
   max-width: 650px;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .section-copy p + p {
