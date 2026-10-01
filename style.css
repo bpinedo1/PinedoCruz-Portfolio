@@ -294,6 +294,10 @@ h2 {
 .project-placeholder {
   display: flex;
   gap: 25px;
+  margin-top: 22px;
+}
+
+.section-intro + .project-placeholder {
   margin-top: 45px;
 }
 
